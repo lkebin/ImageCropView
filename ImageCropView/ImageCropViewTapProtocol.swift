@@ -18,5 +18,5 @@ public protocol ImageCropViewTapProtocol: class {
     
     - parameter imageCropView: the ImageCropView object corresponding to the tapped imageCropView
     */
-    func onImageCropViewTapped(imageCropView: ImageCropView)
+    func onImageCropViewTapped(_ imageCropView: ImageCropView)
 }

@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: ImageCropViewTapProtocol {
-    func onImageCropViewTapped(imageCropView: ImageCropView) {
+    func onImageCropViewTapped(_ imageCropView: ImageCropView) {
         
     }
 }
