@@ -31,7 +31,7 @@ ImageCropView allow you to easily display and crop images
 */
 
 @IBDesignable
-public class ImageCropView: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDelegate {
+open class ImageCropView: UIScrollView, UIScrollViewDelegate, UIGestureRecognizerDelegate {
 
     //MARK: - IBInspectable Properties
     
@@ -40,13 +40,13 @@ public class ImageCropView: UIScrollView, UIScrollViewDelegate, UIGestureRecogni
     
     //MARK: - Private Properties
 
-    private var tapDelegate: ImageCropViewTapProtocol?
+    fileprivate var tapDelegate: ImageCropViewTapProtocol?
 
     
     //MARK: - Public Properties
 
-    public var coverImageView: UIImageView!
-    public var editable = true {
+    open var coverImageView: UIImageView!
+    open var editable = true {
         didSet {
             if editable {
                 enableEditing()
@@ -75,7 +75,7 @@ public class ImageCropView: UIScrollView, UIScrollViewDelegate, UIGestureRecogni
 
     - parameter image: Will be displayed in the view
     */
-    public func setup(image: UIImage, tapDelegate: ImageCropViewTapProtocol? = nil) {
+    open func setup(_ image: UIImage, tapDelegate: ImageCropViewTapProtocol? = nil) {
         coverImageView = UIImageView(image: image)
         coverImageView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size:image.size)
 
@@ -86,7 +86,7 @@ public class ImageCropView: UIScrollView, UIScrollViewDelegate, UIGestureRecogni
         self.tapDelegate = tapDelegate
     }
     
-    public func display() {
+    open func display() {
         let scrollViewFrame = frame
         let scaleWidth = scrollViewFrame.size.width / contentSize.width
         let scaleHeight = scrollViewFrame.size.height / contentSize.height
@@ -100,22 +100,22 @@ public class ImageCropView: UIScrollView, UIScrollViewDelegate, UIGestureRecogni
         contentOffset.y = (contentSize.height - bounds.height) / 2
     }
 
-    public override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    open override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let tapDelegate = tapDelegate {
             tapDelegate.onImageCropViewTapped(self)
         }
     }
     
     
-    public func enableEditing() {
-        scrollEnabled = true
-        pinchGestureRecognizer?.enabled = true
+    open func enableEditing() {
+        isScrollEnabled = true
+        pinchGestureRecognizer?.isEnabled = true
     }
     
     
-    public func disableEditing() {
-        scrollEnabled = false
-        pinchGestureRecognizer?.enabled = false
+    open func disableEditing() {
+        isScrollEnabled = false
+        pinchGestureRecognizer?.isEnabled = false
     }
     
     
@@ -124,9 +124,9 @@ public class ImageCropView: UIScrollView, UIScrollViewDelegate, UIGestureRecogni
 
     - returns: the cropped image
     */
-    public func croppedImage() -> UIImage? {
-        let tmp = CGImageCreateWithImageInRect(coverImageView.image?.CGImage, cropRect())
-        let img = UIImage(CGImage: tmp!, scale: coverImageView.image!.scale, orientation: coverImageView.image!.imageOrientation)
+    open func croppedImage() -> UIImage? {
+        let tmp = coverImageView.image?.cgImage?.cropping(to: cropRect())
+        let img = UIImage(cgImage: tmp!, scale: coverImageView.image!.scale, orientation: coverImageView.image!.imageOrientation)
         
         return img
     }
@@ -139,9 +139,9 @@ public class ImageCropView: UIScrollView, UIScrollViewDelegate, UIGestureRecogni
     
     - returns: the cropRect
     */
-    public func cropRect() -> CGRect {
+    open func cropRect() -> CGRect {
         let scale = coverImageView.image!.size.width / coverImageView.frame.width
-        let cropRect = CGRectMake(contentOffset.x * scale, contentOffset.y * scale, frame.width * scale, frame.height * scale)
+        let cropRect = CGRect(x: contentOffset.x * scale, y: contentOffset.y * scale, width: frame.width * scale, height: frame.height * scale)
         return cropRect
     }
     
@@ -150,7 +150,7 @@ public class ImageCropView: UIScrollView, UIScrollViewDelegate, UIGestureRecogni
     
     - parameter rect: The crop Rect
     */
-    public func setCrop(rect: CGRect) {
+    open func setCrop(_ rect: CGRect) {
         let scale: CGFloat = rect.width / frame.width
   
         zoomScale = 1 / scale
@@ -160,7 +160,7 @@ public class ImageCropView: UIScrollView, UIScrollViewDelegate, UIGestureRecogni
     
     //MARK: - UIScrollViewDelegate
     
-    public func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    open func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return coverImageView
     }
 }

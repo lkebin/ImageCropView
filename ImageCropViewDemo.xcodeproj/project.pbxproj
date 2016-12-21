@@ -15,14 +15,14 @@
 		350DA0231BB233AD000D6014 /* ImageCropViewDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350DA0221BB233AD000D6014 /* ImageCropViewDemoTests.swift */; };
 		350DA02E1BB233AD000D6014 /* ImageCropViewDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350DA02D1BB233AD000D6014 /* ImageCropViewDemoUITests.swift */; };
 		350DA0431BB233C8000D6014 /* ImageCropView.h in Headers */ = {isa = PBXBuildFile; fileRef = 350DA0421BB233C8000D6014 /* ImageCropView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		350DA04A1BB233C8000D6014 /* ImageCropView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350DA0401BB233C8000D6014 /* ImageCropView.framework */; settings = {ASSET_TAGS = (); }; };
+		350DA04A1BB233C8000D6014 /* ImageCropView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350DA0401BB233C8000D6014 /* ImageCropView.framework */; };
 		350DA0511BB233C8000D6014 /* ImageCropViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350DA0501BB233C8000D6014 /* ImageCropViewTests.swift */; };
 		350DA0551BB233C8000D6014 /* ImageCropView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 350DA0401BB233C8000D6014 /* ImageCropView.framework */; };
 		350DA0561BB233C8000D6014 /* ImageCropView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 350DA0401BB233C8000D6014 /* ImageCropView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		350DA0611BB233F0000D6014 /* ImageCaptionCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350DA05E1BB233F0000D6014 /* ImageCaptionCropView.swift */; settings = {ASSET_TAGS = (); }; };
-		350DA0621BB233F0000D6014 /* ImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350DA05F1BB233F0000D6014 /* ImageCropView.swift */; settings = {ASSET_TAGS = (); }; };
-		350DA0631BB233F0000D6014 /* ImageCropViewTapProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350DA0601BB233F0000D6014 /* ImageCropViewTapProtocol.swift */; settings = {ASSET_TAGS = (); }; };
-		350DA06B1BB23A97000D6014 /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 350DA06A1BB23A97000D6014 /* testImage.jpg */; settings = {ASSET_TAGS = (); }; };
+		350DA0611BB233F0000D6014 /* ImageCaptionCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350DA05E1BB233F0000D6014 /* ImageCaptionCropView.swift */; };
+		350DA0621BB233F0000D6014 /* ImageCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350DA05F1BB233F0000D6014 /* ImageCropView.swift */; };
+		350DA0631BB233F0000D6014 /* ImageCropViewTapProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350DA0601BB233F0000D6014 /* ImageCropViewTapProtocol.swift */; };
+		350DA06B1BB23A97000D6014 /* testImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 350DA06A1BB23A97000D6014 /* testImage.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -339,20 +339,25 @@
 				TargetAttributes = {
 					350DA0091BB233AD000D6014 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 					};
 					350DA01D1BB233AD000D6014 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 						TestTargetID = 350DA0091BB233AD000D6014;
 					};
 					350DA0281BB233AD000D6014 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 						TestTargetID = 350DA0091BB233AD000D6014;
 					};
 					350DA03F1BB233C8000D6014 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 					};
 					350DA0481BB233C8000D6014 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0820;
 						TestTargetID = 350DA0091BB233AD000D6014;
 					};
 				};
@@ -606,6 +611,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanadu.ImageCropViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -619,6 +625,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanadu.ImageCropViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -630,6 +637,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanadu.ImageCropViewDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageCropViewDemo.app/ImageCropViewDemo";
 			};
 			name = Debug;
@@ -642,6 +650,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanadu.ImageCropViewDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageCropViewDemo.app/ImageCropViewDemo";
 			};
 			name = Release;
@@ -653,6 +662,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanadu.ImageCropViewDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ImageCropViewDemo;
 				USES_XCTRUNNER = YES;
 			};
@@ -665,6 +675,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanadu.ImageCropViewDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ImageCropViewDemo;
 				USES_XCTRUNNER = YES;
 			};
@@ -687,6 +698,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -709,6 +721,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanadu.ImageCropView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -722,6 +735,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanadu.ImageCropViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageCropViewDemo.app/ImageCropViewDemo";
 			};
 			name = Debug;
@@ -733,6 +747,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zanadu.ImageCropViewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageCropViewDemo.app/ImageCropViewDemo";
 			};
 			name = Release;
@@ -756,6 +771,7 @@
 				350DA0341BB233AD000D6014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		350DA0351BB233AD000D6014 /* Build configuration list for PBXNativeTarget "ImageCropViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -764,6 +780,7 @@
 				350DA0371BB233AD000D6014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		350DA0381BB233AD000D6014 /* Build configuration list for PBXNativeTarget "ImageCropViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -772,6 +789,7 @@
 				350DA03A1BB233AD000D6014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		350DA0571BB233C9000D6014 /* Build configuration list for PBXNativeTarget "ImageCropView" */ = {
 			isa = XCConfigurationList;
@@ -780,6 +798,7 @@
 				350DA0591BB233C9000D6014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		350DA05B1BB233C9000D6014 /* Build configuration list for PBXNativeTarget "ImageCropViewTests" */ = {
 			isa = XCConfigurationList;
@@ -788,6 +807,7 @@
 				350DA05D1BB233C9000D6014 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
