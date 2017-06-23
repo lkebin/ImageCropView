@@ -1,6 +1,6 @@
 # Important
 
-** This project does not maintance any more ** 
+**This project does not maintance any more ** 
 
 # ImageCropView
 ### ImageCropView allow you to easily display and crop images
